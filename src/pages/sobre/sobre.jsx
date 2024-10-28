@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './sobre.scss';
 import Cabegalho from '../cabegalho/cabegalho'
+import Footer from '../footer/footer';
 
 const About = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -52,6 +53,7 @@ const About = () => {
           ))}
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };

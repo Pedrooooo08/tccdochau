@@ -5,6 +5,7 @@ import chocolate from '../image/bolo da vo do break.jpg';
 import individuais from '../image/Doces Individuais.jpg';
 import combo from '../image/Combo de Festas.jpg';
 import Cabegalho from '../cabegalho/cabegalho';
+import Footer from '../footer/footer';
 
 
 const products = [
@@ -103,8 +104,9 @@ const Products = () => {
           </div>
         ))}
       </div>
-
+      <Footer/>
     </div>
+   
   );
 };
 
