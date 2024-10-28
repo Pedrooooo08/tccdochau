@@ -1,37 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './cabegalho.scss';
 import logo from '../image/Sabores da rua.png';
 
+const Cabegalho = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+    if (window.innerWidth >= 768) {
+      setMobileMenuOpen(false);
+    }
+  };
 
-const Cabecalho = () => {
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="header">
       <img src={logo} alt="Logo da Confeitaria" className="logo" />
-      <div className="nav">
-
-      <div>
+      {isMobile ? (
+        <>
+          <button 
+            className="menu-button" 
+            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            Menu
+          </button>
+          {isMobileMenuOpen && (
+            <div className="mobile-menu">
+              <Link to="/" className="home">Home</Link>
+              <Link to="/Sobre" className="sobre">Sobre nós</Link>
+              <Link to="/Produtos" className="produtos">Produtos</Link>
+              <Link to="/Login" className="login">Login</Link>
+              <Link to="/Contato" className="contato">Contato</Link>
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="nav">
           <Link to="/" className="home">Home</Link>
-        </div>
-
-        <div>
           <Link to="/Sobre" className="sobre">Sobre nós</Link>
-        </div>
-        <div>
           <Link to="/Produtos" className="produtos">Produtos</Link>
-        </div>
-       
-        <div>
           <Link to="/Login" className="login">Login</Link>
+          <Link to="/Contato" className="contato">Contato</Link>
         </div>
-        <div className="contato">
-          <Link to="/Contato">Contato</Link>
-        </div>
-
-      </div>
+      )}
     </div>
   );
 };
 
-export default Cabecalho;
+export default Cabegalho;
