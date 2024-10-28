@@ -1,0 +1,129 @@
+contatos scss.contato-home {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #F9D9E3, #FFEFDA);
+}
+
+.contato-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.contato-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #D1C6D9;
+  border-radius: 40px;
+  font-size: 30px;
+  color: #333;
+  transition: background-color 0.3s, transform 0.3s;
+
+  margin-left: 300px;
+  height: 50px;
+  width: 180px;
+  padding: 0 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contato-links a:hover {
+  background-color: #BDA0C6;
+  transform: translateY(-2px);
+}
+
+.contato-links img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.wats {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #D1C6D9;
+  border-radius: 40px;
+  font-size: 30px;
+  color: #333;
+  transition: background-color 0.3s, transform 0.3s;
+
+  height: 50px;
+  width: 180px;
+  padding: 0 20px;
+  margin-left: 300px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wats:hover {
+  background-color: #BDA0C6;
+  transform: translateY(-2px);
+}
+
+.whats {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}
+
+.logo1 {
+  width: 90px;
+  height: 40px;
+  margin-left: 60px; 
+  border-radius: 100%;
+  margin-top: 0px;
+}
+
+.titulo {
+  display: flex;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 50px;
+  height: 60px;
+  width: 200px;
+  padding: 0 20px;
+  margin-left: 500px;
+  margin-top: 150px; 
+  align-items: end;
+  color: #333; 
+  transition: color 0.3s;
+}
+
+.titulo:hover {
+  color: #FF6347; 
+}
+
+.contato-links:hover {
+  color: #FF6347; 
+}
+
+@media (max-width: 768px) {
+  .contato-links a,
+  .wats {
+      width: 150px;
+      font-size: 1.2rem; 
+      margin-left: 0; 
+  }
+
+  .titulo {
+      font-size: 1.5rem; 
+      margin-left: auto; 
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-links a,
+  .wats {
+      width: 120px;
+      font-size: 1rem; 
+      margin-left: 0; 
+  }
+
+  .titulo {
+      font-size: 1.2rem; 
+      margin-left: auto; 
+  }
+}

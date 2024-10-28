@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens */
+  justify-content: space-between; /* Distribui espaço entre logo e nav */
+  padding: 20px;
+  background-color: #800f2f;
+  position: fixed;
+  width: 100%; /* Corrigido para 100% */
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%; /* Altera para 50% para um círculo perfeito */
+  margin-left: 60px; /* Espaço à esquerda */
+}
+
+.nav {
+  display: flex;
+  gap: 65px; /* Ajustado para um espaçamento adequado entre os itens */
+  margin-right: 60px; /* Espaço à direita para manter alinhado */
+}
+
+.nav a {
+  text-decoration: none;
+  color: #590D22;
+  font-weight: bold;
+  padding: 10px 15px; /* Adicionado padding horizontal para melhorar o clique */
+  transition: color 0.3s;
+  background-color: #FFB3C1;
+  border-radius: 20px; 
+  font-size: 25px;
+}
+
+.nav a:hover {
+  color: #FF8FA3; 
+}
