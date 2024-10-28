@@ -7,6 +7,8 @@ import Sobre from './pages/sobre/sobre';
 import Produtos from './pages/produtos/produtos';
 import Cabegalho from './pages/cabegalho/cabegalho';
 import Contato from './pages/contato/contatos';
+import Footer from './pages/footer/footer';
+
 
 
 
@@ -21,7 +23,7 @@ const App = () => {
         <Route path="/produtos" element={<Produtos />} />
         <Route path="/cabegalho" element={<Cabegalho />} />
         <Route path="/contato" element={<Contato />} />
- 
+        <Route path="/footer" element={<  Footer />} />
       </Routes>
     </Router>
   );

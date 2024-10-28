@@ -5,6 +5,7 @@ import Sonho from '../image/sonho.jpg';
 import salgado from '../image/salgado.jpg';
 import doces from '../image/miguel.webp';
 import morango from '../image/morago.webp';
+import Footer from '../footer/footer';
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -45,6 +46,7 @@ const INICIO = () => {
           <img src={morango} alt="Morango" className="swiper-image"/>
         </SwiperSlide>
       </Swiper>
+      <Footer/>
     </div>
   );
 };
