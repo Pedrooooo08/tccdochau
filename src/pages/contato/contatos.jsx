@@ -12,7 +12,7 @@ import face from '../image/face.png';
 const Contato = () => {
   return (
     <>
-      <Cabecalho />
+   
       <div className='contato-home'>
     
        <h1 className='titulo'>contatos</h1>
