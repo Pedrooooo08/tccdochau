@@ -1,21 +1,18 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to right, #ffffff, #f9d5db); // Cor de fundo para toda a página
+}
+
 .about-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   color: #f8f8f8;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative; // Alterado para relative
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(to right, #FFFFFF, #F9D5DB);;
-
-
+  height: 100%; // Ajuste removido
 
   .about-header {
     text-align: center;
@@ -23,12 +20,12 @@
 
     h1 {
       font-size: 2.5rem;
-      color: #8e5b4f;
+      color: #6b4f4f; // Atualizado
     }
 
     p {
       font-size: 1.2rem;
-      color: #555;
+      color: #444; // Atualizado
     }
   }
 
@@ -36,10 +33,10 @@
     text-align: center;
 
     h2 {
-      margin-top: 0px;
+      margin-top: 0;
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #8e5b4f;
+      color: #6b4f4f; // Atualizado
     }
 
     .differentials-grid {
@@ -48,7 +45,7 @@
       gap: 20px;
 
       .differential {
-        background-color: #e5bba0;
+        background-color: #e2b5a3; // Atualizado
         border-radius: 8px;
         padding: 15px;
         cursor: pointer;
@@ -66,7 +63,7 @@
 
         &.active {
           transform: scale(1.05);
-          background-color: #d59e8e;
+          background-color: #d69b8a; // Atualizado
 
           p {
             display: block;
@@ -75,7 +72,7 @@
         }
 
         &:hover {
-          background-color: #d59e8e;
+          background-color: #d69b8a; // Atualizado
         }
       }
     }
@@ -127,8 +124,6 @@
 }
 
 .texto {
-
-  display: 25;
+  display: block; // Corrigido de 25 para block
   margin-top: 200px;
-
 }

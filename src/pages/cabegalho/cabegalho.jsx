@@ -32,21 +32,21 @@ const Cabegalho = () => {
           </button>
           {isMobileMenuOpen && (
             <div className="mobile-menu">
-              <Link to="/" className="home">Home</Link>
-              <Link to="/Sobre" className="sobre">Sobre nós</Link>
-              <Link to="/Produtos" className="produtos">Produtos</Link>
-              <Link to="/Login" className="login">Login</Link>
-              <Link to="/Contato" className="contato">Contato</Link>
+              <Link to="/" className="menu-item">Home</Link>
+              <Link to="/Sobre" className="menu-item">Sobre nós</Link>
+              <Link to="/Produtos" className="menu-item">Produtos</Link>
+              <Link to="/Login" className="menu-item">Login</Link>
+              <Link to="/Contato" className="menu-item">Contato</Link>
             </div>
           )}
         </>
       ) : (
         <div className="nav">
-          <Link to="/" className="home">Home</Link>
-          <Link to="/Sobre" className="sobre">Sobre nós</Link>
-          <Link to="/Produtos" className="produtos">Produtos</Link>
-          <Link to="/Login" className="login">Login</Link>
-          <Link to="/Contato" className="contato">Contato</Link>
+          <Link to="/" className="nav-item">Home</Link>
+          <Link to="/Sobre" className="nav-item">Sobre nós</Link>
+          <Link to="/Produtos" className="nav-item">Produtos</Link>
+          <Link to="/Login" className="nav-item">Login</Link>
+          <Link to="/Contato" className="nav-item">Contato</Link>
         </div>
       )}
     </div>
