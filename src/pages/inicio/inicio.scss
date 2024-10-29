@@ -1,0 +1,140 @@
+$primary-color: #D90429;
+$hover-color: #FF8FA3;
+$background-gradient: linear-gradient(to right, #FFF0F3, #FFD1DC);
+$text-color: #8e5b4f;
+
+.inicio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: $background-gradient;
+  min-height: 100vh;
+
+  .titulo-principal {
+    font-size: 2.5rem;
+    color: $text-color;
+    margin-bottom: 20px;
+    margin-top: 155px;
+    text-align: center;
+  }
+
+  .subtitulo {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 80%;
+    line-height: 1.5;
+  }
+
+  .carousel-container {
+    width: 80vw; 
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 80vh;
+
+
+
+    .swiper-image {
+      margin-top: 20px;
+      margin-left: 250px;
+      margin-bottom: 50px;
+      width: 60%;
+      height: 500px;
+      object-fit: cover; 
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    color: $primary-color;
+    width: 40px;
+    height: 40px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 10px;
+
+    .swiper-pagination-bullet {
+      background: $primary-color;
+      opacity: 0.7;
+
+      &.swiper-pagination-bullet-active {
+        background: $hover-color;
+      }
+    }
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: $primary-color;
+}
+
+@media (max-width: 768px) {
+  .inicio-container {
+    .titulo-principal {
+      font-size: 2rem;
+    }
+
+    .subtitulo {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+
+    .carousel-container {
+      width: 90vw;
+    }
+
+    .swiper-container {
+      .swiper-image {
+        height: 60vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .inicio-container {
+    .titulo-principal {
+      font-size: 1.5rem;
+    }
+
+    .subtitulo {
+      font-size: 0.9rem;
+    }
+
+    .swiper-container {
+      .swiper-image {
+        height: 50vh;
+      }
+    }
+  }
+}

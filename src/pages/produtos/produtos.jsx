@@ -7,7 +7,7 @@ import combo from '../image/Combo de Festas.jpg';
 import Cabegalho from '../cabegalho/cabegalho';
 import Footer from '../footer/footer';
 
-break e foda
+
 
 const products = [
   {
