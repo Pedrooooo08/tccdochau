@@ -8,6 +8,7 @@ import Cabegalho from '../cabegalho/cabegalho';
 import Footer from '../footer/footer';
 
 
+
 const products = [
   {
     id: 1,
