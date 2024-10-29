@@ -25,14 +25,14 @@ const Contato = () => {
     <div className='face'>
       <a href="https://facebook.com/confeitaria" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Confeitaria">
         <img src={face} alt="Facebook" />
-        Facebook
+        <p>Facebook</p>
       </a>
     </div>
 
     <div className='x'>
       <a href="https://twitter.com/confeitaria" target="_blank" rel="noopener noreferrer" aria-label="Twitter da Confeitaria">
         <img src={x} alt="Twitter" />
-        <p>twitter</p>
+        <p>X</p>
       </a>
     </div>
 
