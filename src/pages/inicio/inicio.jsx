@@ -5,6 +5,9 @@ import salgado from '../image/756a78c2-7f59-499d-9979-a57a09ec92b7___eb262e7e3c6
 import doces from '../image/tesãoi.webp';
 import morango from '../image/guloseimas.webp'
 import Footer from '../footer/footer';
+import ori  from '../image/salgado.jpg'
+import oris from '../image/morago.webp'
+
 import './inicio.scss';
 
 
@@ -43,6 +46,9 @@ const INICIO = () => {
           <img src={morango} alt="Morango" className="swiper-image"/>
         </SwiperSlide>
       </Swiper>
+      <div className='hulk 1'>
+      <img src={ori} alt="image1" />
+      </div>
       <h1 className='titulo-principal'>Sabores da Rua</h1>
       <h2 className='subtitulo'>
         Transformando cada doce em uma celebração de sabores, onde a tradição se encontra com a inovação em cada fatia!
