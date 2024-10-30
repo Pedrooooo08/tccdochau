@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #800f2f;
+  background-color: red;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
-  
+
   
   .logo {
     width: 125px;
@@ -24,11 +24,11 @@
 
     .nav-item {
       text-decoration: none;
-      color: #590D22;
+      color: #000000;
       font-weight: bold;
       padding: 10px 15px;
       transition: background-color 0.3s, color 0.3s, transform 0.2s;
-      background-color: #FFB3C1;
+      background-color: #fae3e7;
       border-radius: 20px; 
       font-size: 25px;
 
@@ -51,8 +51,8 @@
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
 
     &:hover {
-      background-color: #FF8FA3;
-      transform: translateY(-2px); /* Efeito de elevação */
+      background-color: #f8b1be;
+      transform: translateY(-2px); 
     }
   }
 
@@ -63,8 +63,7 @@
     margin-top: 10px;
     background-color: #FFB3C1;
     border-radius: 10px;
-    position: absolute; /* Para que o menu apareça abaixo do botão */
-    left: 0; /* Alinhar à esquerda */
+    position: absolute; 
     padding: 10px;
 
     .menu-item {
@@ -75,8 +74,8 @@
       transition: background-color 0.3s, color 0.3s, transform 0.2s;
 
       &:hover {
-        background-color: #FF8FA3;
-        transform: translateY(-2px); /* Efeito de elevação */
+        background-color: #faa8b7;
+        transform: translateY(-2px);
       }
     }
   }
@@ -93,7 +92,7 @@
     }
 
     .nav {
-      display: none; // Esconde a navegação em telas pequenas
+      display: none; 
     }
   }
 }
