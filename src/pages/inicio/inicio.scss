@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap'); // Fonte de confeitaria
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap');
 
 $primary-color: #D90429;
 $hover-color: #FF8FA3;
@@ -9,14 +9,14 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Dancing Script', cursive; // Aplicar a nova fonte
+  font-family: 'Dancing Script', cursive;
 }
 
 .inicio-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: -5px;
   background: $background-gradient;
   min-height: 100vh;
 
@@ -30,7 +30,7 @@ body, html {
   }
 
   .subtitulo {
-    font-size: 1.25rem;
+    font-size: 1.5rem; // Tamanho da fonte aumentado
     color: #333;
     margin-bottom: 40px;
     text-align: center;
@@ -44,28 +44,28 @@ body, html {
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
-    display: flex; // Usar flexbox para centralizar
-    justify-content: center; // Centralizar o swiper
+    display: flex;
+    justify-content: center;
   }
 
   .swiper-container {
     display: flex;
+    margin-top: 250px;
     border-radius: 50px;
-    margin-left: 190px;
-    margin-top: 200px;
+    margin-left: 150px;
     width: 100%;
-    height: auto; // Deixar a altura automática para se ajustar ao conteúdo
-    justify-content: center; // Centraliza horizontalmente
-    align-items: center; // Centraliza verticalmente
+    height: auto;
+    justify-content: center;
+    align-items: center;
 
     .swiper-wrapper {
-      display: flex; // Garantir que os slides fiquem em linha
+      display: flex;
     }
 
     .swiper-image {
-      margin: 0; // Remover margens para evitar deslocamento
-      width: 80%; // Definir uma largura consistente
-      height: auto; // Manter a proporção da imagem
+      margin: 0;
+      width: 80%;
+      height: auto;
       object-fit: cover; 
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -85,6 +85,7 @@ body, html {
     width: 40px;
     height: 40px;
     transition: color 0.3s;
+    display: none;
 
     &:hover {
       color: $hover-color;
@@ -92,11 +93,14 @@ body, html {
   }
 
   .swiper-pagination {
+    display: none;
     bottom: 10px;
 
     .swiper-pagination-bullet {
+      display: none;
       background: $primary-color;
       opacity: 0.7;
+      margin-right: 100;
 
       &.swiper-pagination-bullet-active {
         background: $hover-color;
@@ -114,7 +118,6 @@ body, html {
   background-color: $primary-color;
 }
 
-/* Estilos para a seção Destaques */
 .destaques {
   text-align: center;
   margin: 50px 0;
@@ -128,8 +131,8 @@ body, html {
   .destaques-container {
     display: flex;
     gap: 20px;
-    justify-content: center; // Alinhamento horizontal
-    flex-wrap: wrap; // Permitir quebra de linha se necessário
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .destaque-item {
@@ -153,7 +156,6 @@ body, html {
   }
 }
 
-/* Estilos para a seção Produtos */
 .produtos {
   text-align: center;
   margin: 50px 0;
@@ -166,9 +168,9 @@ body, html {
 
   .produtos-container {
     display: flex;
-    flex-wrap: wrap; // Permitir que os produtos se quebrem para a linha seguinte
+    flex-wrap: wrap;
     gap: 100px;
-    justify-content: center; // Centraliza os produtos
+    justify-content: center;
   }
 
   .produto-item {
@@ -176,7 +178,6 @@ body, html {
     text-align: center;
 
     img {
- 
       height: 200px;
       width: 250px;
       border-radius: 10px;
@@ -220,12 +221,13 @@ body, html {
 @media (max-width: 768px) {
   .inicio-container {
     .titulo-principal {
-      font-size: 2rem;
+      font-size:100px;
     }
 
     .subtitulo {
       font-size: 1rem;
       max-width: 90%;
+      font-size: 1000px;
     }
 
     .carousel-container {
@@ -242,18 +244,18 @@ body, html {
   .destaques,
   .produtos {
     h2 {
-      font-size: 1.5rem; // Ajustar tamanho do título em telas menores
+      font-size: 1.5rem;
     }
 
     .destaques-container,
     .produtos-container {
-      flex-direction: column; // Mudar para coluna em telas menores
+      flex-direction: column;
       align-items: center;
     }
 
     .destaque-item,
     .produto-item {
-      width: 80%; // Ajustar largura dos itens em telas menores
+      width: 80%;
     }
   }
 }

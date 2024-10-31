@@ -8,7 +8,6 @@ import Cabegalho from '../cabegalho/cabegalho';
 import Footer from '../footer/footer';
 
 
-
 const products = [
   {
     id: 1,
@@ -57,70 +56,60 @@ const Products = () => {
   };
 
   return (
-    <> 
-        <Cabegalho />
     <div className="products-container">
- 
 
-
-
-
-        <h1>Nosso Cardápio de Produtos</h1>
-        <div className="products-grid">
-          {products.map((product) => (
-            <div key={product.id} className="product-card">
-              <div className="image-container">
-                <img src={product.image} alt={product.name} />
-              </div>
-              <h3>{product.name}</h3>
-              <p>{product.description}</p>
-              <p className="price">R$ {product.price.toFixed(2)}</p>
-              <label>
-                Quantidade:
-                <input
-                  type="number"
-                  min="1"
-                  value={quantities[product.id] || 1}
-                  onChange={(e) => handleQuantityChange(product.id, e.target.value)}
-                />
-              </label>
-              {product.type === 'bolo' && (
-                <>
-                  <label>
-                    Peso (kg):
-                    <input type="number" min="1" placeholder="Peso" />
-                  </label>
-                  <label>
-                    Cor do Bolo:
-                    <input type="text" placeholder="Ex: Vermelho" />
-                  </label>
-                </>
-              )}
-              {product.type === 'doce' && (
-                <label>
-                  Tipo de Doce:
-                  <input type="text" placeholder="Ex: Brigadeiro" />
-                </label>
-              )}
-              <div className="button-container">
-                <button className="view-button">Ver Produto</button>
-                <button className="add-button" onClick={() => handleAddToCart(product)}>
-                  Adicionar ao Carrinho
-                </button>
-              </div>
+      <Cabegalho />
+      <h1>Nosso Cardápio de Produtos</h1>
+      <div className="products-grid">
+        {products.map((product) => (
+          <div key={product.id} className="product-card">
+            <div className="image-container">
+              <img src={product.image} alt={product.name} />
             </div>
-          ))}
-        </div>
+            <h3>{product.name}</h3>
+            <p>{product.description}</p>
+            <p className="price">R$ {product.price.toFixed(2)}</p>
+            <label>
+              Quantidade:
+              <input
+                type="number"
+                min="1"
+                value={quantities[product.id] || 1}
+                onChange={(e) => handleQuantityChange(product.id, e.target.value)}
+              />
+            </label>
+            {product.type === 'bolo' && (
+              <>
+                <label>
+                  Peso (kg):
+                  <input type="number" min="1" placeholder="Peso" />
+                </label>
+                <label>
+                  Cor do Bolo:
+                  <input type="text" placeholder="Ex: Vermelho" />
+                </label>
+              </>
+            )}
+            {product.type === 'doce' && (
+              <label>
+                Tipo de Doce:
+                <input type="text" placeholder="Ex: Brigadeiro" />
+              </label>
+            )}
+            <div className="button-container">
+              <button className="view-button">Ver Produto</button>
+              <button className="add-button" onClick={() => handleAddToCart(product)}>
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        
+        ))}
+               
       </div>
-      <Footer />
-
-
-
-    </>
-
-
+      <Footer/>
+    </div>
   );
 };
 
 export default Products;
-

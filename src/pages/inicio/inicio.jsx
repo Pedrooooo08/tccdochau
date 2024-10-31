@@ -25,7 +25,7 @@ const INICIO = () => {
 
 
       <Cabecalho />
-
+    
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={50}
@@ -83,10 +83,11 @@ const INICIO = () => {
         </div>
       </div>
 
-
-
       <Footer />
+
+ 
     </div>
+
   );
 };
 

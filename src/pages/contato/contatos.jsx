@@ -6,7 +6,7 @@ import x from '../image/x.png';
 import wats from '../image/wetz.png';
 import face from '../image/face.png';
 import Footer from '../footer/footer';
-import natal from '../image/natal.webp'
+
 
 
 
@@ -45,15 +45,12 @@ const Contato = () => {
   
 
      
-    </div>
 
-    <img src={natal} alt="iamgem dos cara" className="natal" />
-  </div>
 </div>
 <Footer />
       
  
-    </>
+
   );
 };
 
