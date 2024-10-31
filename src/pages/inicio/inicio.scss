@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap'); // Fonte de confeitaria
+
 $primary-color: #D90429;
 $hover-color: #FF8FA3;
 $background-gradient: linear-gradient(to right, #FFF0F3, #FFD1DC);
 $text-color: #8e5b4f;
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Dancing Script', cursive; // Aplicar a nova fonte
+}
 
 .inicio-container {
   display: flex;
@@ -17,6 +26,7 @@ $text-color: #8e5b4f;
     margin-bottom: 20px;
     margin-top: 75px;
     text-align: center;
+    animation: fadeIn 1s ease-in;
   }
 
   .subtitulo {
@@ -26,6 +36,7 @@ $text-color: #8e5b4f;
     text-align: center;
     max-width: 80%;
     line-height: 1.5;
+    animation: fadeIn 1s ease-in 0.5s;
   }
 
   .carousel-container {
@@ -33,28 +44,39 @@ $text-color: #8e5b4f;
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
+    display: flex; // Usar flexbox para centralizar
+    justify-content: center; // Centralizar o swiper
   }
 
   .swiper-container {
+    display: flex;
+    border-radius: 50px;
+    margin-left: 190px;
+    margin-top: 200px;
     width: 100%;
-    height: 80vh;
+    height: auto; // Deixar a altura automática para se ajustar ao conteúdo
+    justify-content: center; // Centraliza horizontalmente
+    align-items: center; // Centraliza verticalmente
 
-
+    .swiper-wrapper {
+      display: flex; // Garantir que os slides fiquem em linha
+    }
 
     .swiper-image {
-      margin-top: 200px;
-      margin-left: 145px;
-      margin-bottom: 50px;
-      width: 80%;
-      height: 300px;
+      margin: 0; // Remover margens para evitar deslocamento
+      width: 80%; // Definir uma largura consistente
+      height: auto; // Manter a proporção da imagem
       object-fit: cover; 
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
 
       &:hover {
         transform: scale(1.05);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
       }
+
+      animation: slideIn 0.5s ease-in;
     }
   }
 
@@ -83,12 +105,6 @@ $text-color: #8e5b4f;
   }
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
 .cabecalho {
   display: flex;
   justify-content: center;
@@ -96,6 +112,109 @@ body, html {
   width: 100%;
   padding: 10px;
   background-color: $primary-color;
+}
+
+/* Estilos para a seção Destaques */
+.destaques {
+  text-align: center;
+  margin: 50px 0;
+
+  h2 {
+    font-size: 2rem;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  .destaques-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center; // Alinhamento horizontal
+    flex-wrap: wrap; // Permitir quebra de linha se necessário
+  }
+
+  .destaque-item {
+    width: 250px;
+    text-align: center;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .preco {
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Estilos para a seção Produtos */
+.produtos {
+  text-align: center;
+  margin: 50px 0;
+
+  h2 {
+    font-size: 2rem;
+    color: $text-color;
+    margin-bottom: 30px;
+  }
+
+  .produtos-container {
+    display: flex;
+    flex-wrap: wrap; // Permitir que os produtos se quebrem para a linha seguinte
+    gap: 100px;
+    justify-content: center; // Centraliza os produtos
+  }
+
+  .produto-item {
+    width: 200px;
+    text-align: center;
+
+    img {
+ 
+      height: 200px;
+      width: 250px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    p {
+      color: $text-color;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -117,6 +236,24 @@ body, html {
       .swiper-image {
         height: 60vh;
       }
+    }
+  }
+
+  .destaques,
+  .produtos {
+    h2 {
+      font-size: 1.5rem; // Ajustar tamanho do título em telas menores
+    }
+
+    .destaques-container,
+    .produtos-container {
+      flex-direction: column; // Mudar para coluna em telas menores
+      align-items: center;
+    }
+
+    .destaque-item,
+    .produto-item {
+      width: 80%; // Ajustar largura dos itens em telas menores
     }
   }
 }
