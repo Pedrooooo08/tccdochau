@@ -43,9 +43,7 @@ const Contato = () => {
 
           <div className='wats'>
             <a 
-              href="https://wa.me/yourwhatsapplink" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              href="https://wa.me/5511939493119" target="_blank" rel="noopener noreferrer" 
               aria-label="WhatsApp da Confeitaria"
             >
               <img className='whats' src={wats} alt="WhatsApp" />
