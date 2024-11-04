@@ -15,7 +15,7 @@ const products = [
     id: 1,
     name: 'Bolo de Chocolate',
     description: 'Delicioso bolo de chocolate com recheio cremoso.',
-    price: 25.00,
+    price: 95.00,
     image: chocolate,
     type: 'bolo',
   },
@@ -23,7 +23,7 @@ const products = [
     id: 2,
     name: 'Bolo de Baunilha',
     description: 'Bolo leve de baunilha com cobertura de chantilly.',
-    price: 20.00,
+    price: 60.00,
     image: bolo,
     type: 'bolo',
   },
@@ -31,7 +31,7 @@ const products = [
     id: 3,
     name: 'Doces Individuais',
     description: 'Uma seleção de doces variados para você saborear.',
-    price: 3.00,
+    price: 90.00,
     image: individuais,
     type: 'doce',
   },
@@ -137,7 +137,7 @@ const Products = () => {
             )}
             
             <div className="button-container">
-              <button className="view-button">Ver Produto</button>
+         
               <button className="add-button" onClick={() => handleAddToCart(product)}>
                 Adicionar ao Carrinho
               </button>
