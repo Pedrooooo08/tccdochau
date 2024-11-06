@@ -16,7 +16,7 @@ const products = [
     price: 25.00,
     image: chocolate,
     type: 'bolo',
-  },
+  },j
   {
     id: 2,
     name: 'Bolo de Baunilha',
