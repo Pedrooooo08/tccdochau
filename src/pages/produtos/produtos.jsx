@@ -8,12 +8,14 @@ import Cabegalho from '../cabegalho/cabegalho';
 import Footer from '../footer/footer';
 
 
+
+
 const products = [
   {
     id: 1,
     name: 'Bolo de Chocolate',
     description: 'Delicioso bolo de chocolate com recheio cremoso.',
-    price: 25.00,
+    price: 95.00,
     image: chocolate,
     type: 'bolo',
   },j
@@ -21,7 +23,7 @@ const products = [
     id: 2,
     name: 'Bolo de Baunilha',
     description: 'Bolo leve de baunilha com cobertura de chantilly.',
-    price: 20.00,
+    price: 60.00,
     image: bolo,
     type: 'bolo',
   },
@@ -29,7 +31,7 @@ const products = [
     id: 3,
     name: 'Doces Individuais',
     description: 'Uma seleção de doces variados para você saborear.',
-    price: 3.00,
+    price: 90.00,
     image: individuais,
     type: 'doce',
   },
@@ -45,21 +47,55 @@ const products = [
 
 const Products = () => {
   const [quantities, setQuantities] = useState({});
+  const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
 
   const handleQuantityChange = (id, value) => {
-    setQuantities({ ...quantities, [id]: value });
+    setQuantities({ ...quantities, [id]: parseInt(value) });
   };
 
   const handleAddToCart = (product) => {
     const quantity = quantities[product.id] || 1;
-    console.log(`Adicionado ao carrinho: ${product.name}, Quantidade: ${quantity}`);
+    const newItem = { ...product, quantity };
+
+    setCart((prevCart) => {
+      const existingProduct = prevCart.find((item) => item.id === product.id);
+      let updatedCart;
+
+      if (existingProduct) {
+        
+        updatedCart = prevCart.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
+        );
+      } else {
+      
+        updatedCart = [...prevCart, newItem];
+      }
+
+      
+      const newTotal = updatedCart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+      setTotal(newTotal);
+
+      return updatedCart;
+    });
+  };
+
+  const handleCheckout = () => {
+    if (cart.length === 0) {
+      alert("O carrinho está vazio.");
+      return;
+    }
+
+    alert(`Compra concluída! Total: R$ ${total.toFixed(2)}`);
+    setCart([]);
+    setTotal(0);
   };
 
   return (
     <div className="products-container">
-
       <Cabegalho />
       <h1>Nosso Cardápio de Produtos</h1>
+      
       <div className="products-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">
@@ -69,6 +105,7 @@ const Products = () => {
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <p className="price">R$ {product.price.toFixed(2)}</p>
+            
             <label>
               Quantidade:
               <input
@@ -78,6 +115,7 @@ const Products = () => {
                 onChange={(e) => handleQuantityChange(product.id, e.target.value)}
               />
             </label>
+            
             {product.type === 'bolo' && (
               <>
                 <label>
@@ -90,24 +128,44 @@ const Products = () => {
                 </label>
               </>
             )}
+            
             {product.type === 'doce' && (
               <label>
                 Tipo de Doce:
                 <input type="text" placeholder="Ex: Brigadeiro" />
               </label>
             )}
+            
             <div className="button-container">
-              <button className="view-button">Ver Produto</button>
+         
               <button className="add-button" onClick={() => handleAddToCart(product)}>
                 Adicionar ao Carrinho
               </button>
             </div>
           </div>
-        
         ))}
-               
       </div>
-      <Footer/>
+
+      <div className="cart-container">
+        <h2>Carrinho</h2>
+        {cart.length === 0 ? (
+          <p>O carrinho está vazio.</p>
+        ) : (
+          <ul>
+            {cart.map((item) => (
+              <li key={item.id}>
+                {item.name} - Quantidade: {item.quantity} - Preço: R$ {(item.price * item.quantity).toFixed(2)}
+              </li>
+            ))}
+          </ul>
+        )}
+        <h3>Total: R$ {total.toFixed(2)}</h3>
+        <button onClick={handleCheckout} disabled={cart.length === 0}>
+          Concluir Compra
+        </button>
+      </div>
+
+      <Footer />
     </div>
   );
 };

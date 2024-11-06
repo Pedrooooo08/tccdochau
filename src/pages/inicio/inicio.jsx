@@ -60,24 +60,24 @@ const INICIO = () => {
         <div className="produtos-container">
           <div className="produto-item">
             <img src={van} alt="Produto 1" />
-            <p>salgodo do breack
-              0,00rs
+            <p>Brigadeiro
+              3,00 R$
             </p>
           </div>
           <div className="produto-item">
             <img src={mel} alt="Produto 2" />
-            <p>salgodo do breack
-              0,00rs</p>
+            <p> Pão de mel
+              6,00 R$ </p>
           </div>
           <div className="produto-item">
             <img src={bolo} alt="Produto 3" />
-            <p>salgodo do breack
-              0,00rs</p>
+            <p> Trufa
+              4,50 R$ </p>
           </div>
           <div className="produto-item">
             <img src={brow} alt="Produto 4" />
-            <p>salgodo do breack
-              0,00rs</p>
+            <p> Brownie 
+              8,00rs</p>
           </div>
 
         </div>
