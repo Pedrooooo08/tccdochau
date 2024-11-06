@@ -9,7 +9,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1px;
-  background-color: red;
+  background-color: #D90429;
   position: fixed;
   width: 100%;
   top: 0;
@@ -19,13 +19,13 @@ body {
     width: 125px;
     height: 125px;
     border-radius: 50%;
-    margin-left: 60px;
+    margin-left: 15px;
   }
 
   .nav {
     display: flex;
-    gap: 120px;
-    margin-right: 0px;
+    gap: 80px;
+    margin-right: 55.12px;
 
     .nav-item {
       text-decoration: none;
@@ -39,6 +39,25 @@ body {
 
       &:hover {
         color: #FF8FA3;
+        background-color: #FF8FA3;
+        transform: translateY(-2px);
+      }
+    }
+
+    
+    .button-item {
+      background-color:#fae3e7;
+      color: #000000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 25px;
+      transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
         background-color: #FF8FA3;
         transform: translateY(-2px);
       }
@@ -65,7 +84,7 @@ body {
   .mobile-menu {
     display: flex;
     flex-direction: column;
-    gap: 10000px;
+    gap: 0px;
     margin-top: 10px;
     background-color: #FFB3C1;
     border-radius: 10px;
@@ -80,6 +99,24 @@ body {
 
       &:hover {
         background-color: #faa8b7;
+        transform: translateY(-2px);
+      }
+    }
+
+
+    .button-item {
+      background-color: #FF8FA3;
+      color: #FFF;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
+        background-color: #D90429;
         transform: translateY(-2px);
       }
     }

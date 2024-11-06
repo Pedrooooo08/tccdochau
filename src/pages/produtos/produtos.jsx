@@ -5,7 +5,7 @@ import chocolate from '../image/bolo da vo do break.jpg';
 import individuais from '../image/Doces Individuais.jpg';
 import combo from '../image/Combo de Festas.jpg';
 import Cabegalho from '../cabegalho/cabegalho';
-import Footer from '../footer/footer';
+
 
 
 
@@ -18,7 +18,7 @@ const products = [
     price: 95.00,
     image: chocolate,
     type: 'bolo',
-  },j
+  },
   {
     id: 2,
     name: 'Bolo de Baunilha',
@@ -165,7 +165,7 @@ const Products = () => {
         </button>
       </div>
 
-      <Footer />
+
     </div>
   );
 };

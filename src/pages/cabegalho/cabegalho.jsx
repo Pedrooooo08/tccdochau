@@ -37,6 +37,7 @@ const Cabegalho = () => {
               <Link to="/Produtos" className="menu-item">Produtos</Link>
               <Link to="/Login" className="menu-item">Login</Link>
               <Link to="/Contato" className="menu-item">Contato</Link>
+              <Link to="/Utensílios" className="button-item">Utensílios</Link>
             </div>
           )}
         </>
@@ -47,6 +48,7 @@ const Cabegalho = () => {
           <Link to="/Produtos" className="nav-item">Produtos</Link>
           <Link to="/Login" className="nav-item">Login</Link>
           <Link to="/Contato" className="nav-item">Contato</Link>
+          <Link to="/Utensílios" className="button-item">Utensílios</Link>
         </div>
       )}
     </div>

@@ -5,7 +5,7 @@ import logo from '../image/Sabores da rua.png';
 import x from '../image/x.png';
 import wats from '../image/wetz.png';
 import face from '../image/face.png';
-import Footer from '../footer/footer';
+
 
 const Contato = () => {
   return (
@@ -52,7 +52,7 @@ const Contato = () => {
           </div>
         </div>
       </div>
-      <Footer />
+
     </>
   );
 };
