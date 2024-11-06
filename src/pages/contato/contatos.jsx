@@ -10,7 +10,7 @@ import face from '../image/face.png';
 const Contato = () => {
   return (
     <>
-      <Cabecalho />
+   
       <div className='contato-home'>
         <div className='logo1'>
           <img src={logo} alt="Logo da Confeitaria" />
