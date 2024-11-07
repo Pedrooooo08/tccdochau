@@ -1,5 +1,5 @@
 import React from 'react';
-import Cabecalho from '../cabegalho/cabegalho';
+
 import Sonho from '../image/7aadb69a-7915-4935-b1a6-635cd8e26193___4883223899b870a1c2244be6095659fb.webp';
 import novo from '../image/36397263-115b-4fad-90a2-84ac9298b8ce___b303a223a4d89ad5368c99dbe464ee52.webp';
 import novin from '../image/d2.webp';
@@ -20,7 +20,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 const INICIO = () => {
   return (
     <div className='inicio-container'>
-      <Cabecalho />
+
       
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}

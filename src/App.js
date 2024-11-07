@@ -5,7 +5,7 @@ import Login from './pages/login/login';
 import Sobre from './pages/sobre/sobre';
 import Produtos from './pages/produtos/produtos';
 import Contato from './pages/contato/contatos';
-import UtensiliosProdutos from './pages/utens/utens';
+import Utens from './pages/utens/utens';
 import Cabecalho from './pages/cabegalho/cabegalho';
 import Footer from './pages/footer/footer';
 
@@ -19,9 +19,9 @@ const App = () => {
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/produtos" element={<Produtos />} />
         <Route path="/contato" element={<Contato />} />
-        <Route path="/utensilios" element={<UtensiliosProdutos />} />
+        <Route path="/Utensílios" element={<Utens />} />
       </Routes>
-      <Footer />
+  <Footer/>
     </Router>
   );
 };

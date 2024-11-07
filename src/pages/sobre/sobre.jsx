@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './sobre.scss';
-import Cabegalho from '../cabegalho/cabegalho'
+
 
 
 const About = () => {
@@ -31,7 +31,7 @@ const About = () => {
 
   return (
     <div className="about-container">
-      <Cabegalho />
+
       <header className="about-header">
         <div className='texto'>  <h1>Sobre Nós</h1>
           <p>Na nossa confeitaria, cada doce é uma obra de arte feita com amor e dedicação.</p>

@@ -4,7 +4,7 @@ import bolo from '../image/bolo.jpeg';
 import chocolate from '../image/bolo da vo do break.jpg';
 import individuais from '../image/Doces Individuais.jpg';
 import combo from '../image/Combo de Festas.jpg';
-import Cabegalho from '../cabegalho/cabegalho';
+
 
 
 
@@ -93,7 +93,7 @@ const Products = () => {
 
   return (
     <div className="products-container">
-      <Cabegalho />
+
       <h1>Nosso Cardápio de Produtos</h1>
       
       <div className="products-grid">

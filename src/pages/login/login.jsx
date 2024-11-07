@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import './login.scss';
-import Cabegalho from '../cabegalho/cabegalho'
-
-
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,7 +18,7 @@ const Login = () => {
   return (
     <>
   
-    <Cabegalho />
+
 
 
     <div className="login-container">
