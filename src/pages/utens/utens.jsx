@@ -5,6 +5,14 @@ import './utens.scss';
 
 import s1 from '../image/8c73a2af-91e0-4828-b6b9-9ced67807093___5fe5931756ee3916a0d24bf7061ae26e.webp';
 import s2 from '../image/7fba2b2d-8940-4a3e-a918-53491a9bfa06___4af97d7985220205208a6c8373723c4c.webp';
+import i1 from '../image/colher.png';
+import i2 from '../image/silicone.webp';
+import i3 from '../image/kit.webp';
+import i4 from '../image/espatula.jpeg';
+import i5 from '../image/fouet.png';
+import i6 from '../image/batadeira.jpeg';
+
+
 
 
 
@@ -17,27 +25,44 @@ const swiperSlides = [
 const produtos = [
     {
         id: 1,
-        name: "Kit Espátula SILVER CHEF",
-        price: 14.39,
-        image: "link_para_imagem_do_produto1",
+        name: "kit de confeitaria ",
+        price: 70.00,
+        image: i3,
+        type: "colher",
     },
     {
-        id: 2,
-        name: "Espátula de Silicone Com Cabo Inox",
-        price: 10.99,
-        image: "link_para_imagem_do_produto2",
+        id: 1,
+        name: "Colhe de Silicone",
+        price: 10.39,
+        image: i1,
+        type: "colher",
     },
     {
         id: 3,
-        name: "Conjunto de Espátula Para Confeitar MIMO STYLE",
+        name: "forma de silicone para trufa ",
         price: 19.89,
-        image: "link_para_imagem_do_produto3",
+        image: i2,
     },
     {
-        id: 4,
-        name: "Espátula Para Chocolate P",
-        price: 3.99,
-        image: "link_para_imagem_do_produto4",
+        id: 1,
+        name: " Espátula ",
+        price: 14.39,
+        image: i4,
+        type: "colher",
+    },
+    {
+        id: 1,
+        name: "Fouet",
+        price: 14.39,
+        image: i5,
+        type: "colher",
+    },
+    {
+        id: 1,
+        name: "Batedeira",
+        price: 210.0 ,
+        image: i6,
+        type: "colher",
     },
 ];
 

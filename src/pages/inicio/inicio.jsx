@@ -9,8 +9,12 @@ import mel from '../image/podemel.webp';
 import brow from '../image/brownie.webp';
 import van from '../image/brisadeiro.webp';
 import bolo from '../image/trufas.webp';
+import i11 from '../image/kit.webp';
+import i12 from '../image/aluminio.jpg';
+import i13 from '../image/colher.png';
+import i4 from '../image/espatula.jpeg';
 import './inicio.scss';
-
+import { Link } from 'react-router-dom'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -21,7 +25,6 @@ const INICIO = () => {
   return (
     <div className='inicio-container'>
 
-      
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={50}
@@ -32,16 +35,24 @@ const INICIO = () => {
         className="swiper-container"
       >
         <SwiperSlide>
-          <img src={novao} alt="Sonho" className="swiper-image" />
+          <Link to="/Utensílios">
+            <img src={novao} alt="Sonho" className="swiper-image" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Sonho} alt="Salgado" className="swiper-image" />
+          <Link to="">
+            <img src={Sonho} alt="Salgado" className="swiper-image" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={novin} alt="Doces Individuais" className="swiper-image" />
+          <Link to="/Produtos">
+            <img src={novin} alt="Doces Individuais" className="swiper-image" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={novo} alt="Morango" className="swiper-image" />
+          <Link to="/Utensílios">
+            <img src={novo} alt="Morango" className="swiper-image" />
+          </Link>
         </SwiperSlide>
       </Swiper>
 
@@ -51,29 +62,71 @@ const INICIO = () => {
       </h2>
 
       <div className="produtos">
-        <h2>Nossos Produtos</h2>
+        <h2>Mais vendidos</h2>
         <div className="produtos-container">
+          
+          {/* Produto 1 */}
           <div className="produto-item">
-            <img src={van} alt="Produto 1" />
-            <p>Brigadeiro - 3,00 R$</p>
+            <Link to="/Produtos">
+              <img src={van} alt="Produto 1" />
+            </Link>
           </div>
+          
+          {/* Produto 2 */}
           <div className="produto-item">
-            <img src={mel} alt="Produto 2" />
-            <p>Pão de mel - 6,00 R$</p>
+            <Link to="/Produtos">
+              <img src={mel} alt="Produto 2" />
+            </Link>
           </div>
+          
+          {/* Produto 3 */}
           <div className="produto-item">
-            <img src={bolo} alt="Produto 3" />
-            <p>Trufa - 4,50 R$</p>
+            <Link to="/Produtos">
+              <img src={bolo} alt="Produto 3" />
+            </Link>
           </div>
+          
+          {/* Produto 4 */}
           <div className="produto-item">
-            <img src={brow} alt="Produto 4" />
-            <p>Brownie - 8,00 R$</p>
+            <Link to="/Produtos">
+              <img src={brow} alt="Produto 4" />
+            </Link>
+          </div>
+
+          {/* Produto 5 */}
+          <div className="produto-item">
+            <Link to="/Utensílios">
+              <img src={i13} alt="Produto 5" />
+            </Link>
+            <p></p>
+          </div>
+
+          {/* Produto 6 */}
+          <div className="produto-item">
+            <Link to="/Utensílios">
+              <img src={i12} alt="Produto 6" />
+            </Link>
+            <p></p>
+          </div>
+
+          {/* Produto 7 */}
+          <div className="produto-item">
+            <Link to="/Utensílios">
+              <img src={i11} alt="Produto 7" />
+            </Link>
+            <p></p>
+          </div>
+
+          {/* Produto 8 */}
+          <div className="produto-item">
+            <Link to="/Utensílios">
+              <img src={i4} alt="Produto 8" />
+            </Link>
+            <p></p>
           </div>
         </div>
       </div>
 
-    
-    
     </div>
   );
 };
