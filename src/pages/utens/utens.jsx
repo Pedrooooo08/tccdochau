@@ -11,6 +11,14 @@ import i3 from '../image/kit.webp';
 import i4 from '../image/espatula.jpeg';
 import i5 from '../image/fouet.png';
 import i6 from '../image/batadeira.jpeg';
+import ii from '../image/kitinho.jpeg';
+import ia from '../image/forninho.jpeg';
+import is from '../image/forma.jpeg';
+import ic from '../image/forma silico.jpeg';
+import ib from '../image/nova colher.jpeg';
+import im from '../image/bailarina inox.jpeg';
+
+
 
 
 
@@ -62,6 +70,47 @@ const produtos = [
         name: "Batedeira",
         price: 210.0 ,
         image: i6,
+        type: "colher",
+    },
+    {
+        id: 1,
+        name: "Forno 220V/110V ",
+        price: 1.895,
+        image: ia,
+        type: "colher",
+    },
+    {
+        id: 1,
+        name: "Kit de Silicone",
+        price: 17.39,
+        image: ib,
+        type: "colher",
+    },
+    {
+        id: 3,
+        name: "forma de silicone",
+        price: 15.99,
+        image: ic,
+    },
+    {
+        id: 1,
+        name: " Bailarina inox ",
+        price: 56.99,
+        image: im,
+        type: "colher",
+    },
+    {
+        id: 1,
+        name: "Forma inox",
+        price: 65.0,
+        image: is,
+        type: "colher",
+    },
+    {
+        id: 1,
+        name: "Enrolador de brigadeiro inox",
+        price: 35.0 ,
+        image: ii,
         type: "colher",
     },
 ];
@@ -145,7 +194,8 @@ const UtensiliosEBicosContent = () => {
             </Swiper>
 
             <div className="lista-produtos">
-                <h2>Espátulas</h2>
+                <h2>Produtos para confeitaria</h2>
+                <hr class="linha-separadora"></hr>
                 <div className="grid-produtos">
                     {produtos.map((produto) => (
                         <CartaoProduto
