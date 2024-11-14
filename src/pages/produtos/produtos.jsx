@@ -4,10 +4,15 @@ import bolo from '../image/bolo.jpeg';
 import chocolate from '../image/bolo da vo do break.jpg';
 import individuais from '../image/Doces Individuais.jpg';
 import combo from '../image/Combo de Festas.jpg';
-import boloi from '../image/Pão de mel.jpeg';
-import chocolateg from '../image/pã';
-import individuaisf from '../image/Doces Individuais.jpg';
-import combom from '../image/Combo de Festas.jpg';
+
+import bol from '../image/Pão de mel.jpeg';
+import chocolat from '../image/franguinho.jpg';
+import individuai from '../image/sagadinho.jpg';
+import comb from '../image/pão de metro.jpeg';
+import uai from '../image/brownie.jpeg';
+import omb from '../image/no pote.webp';
+
+
 
 
 
@@ -52,7 +57,7 @@ const products = [
     name: 'Bolo de Chocolate',
     description: 'Delicioso bolo de chocolate com recheio cremoso.',
     price: 95.00,
-    image: chocolate,
+    image: uai,
     type: 'bolo',
   },
   {
@@ -60,7 +65,7 @@ const products = [
     name: 'Bolo de Baunilha',
     description: 'Bolo leve de baunilha com cobertura de chantilly.',
     price: 60.00,
-    image: bolo,
+    image: comb,
     type: 'bolo',
   },
   {
@@ -68,7 +73,7 @@ const products = [
     name: 'Doces Individuais',
     description: 'Uma seleção de doces variados para você saborear.',
     price: 90.00,
-    image: individuais,
+    image: bol,
     type: 'doce',
   },
   {
@@ -76,7 +81,7 @@ const products = [
     name: 'Combo de Festas',
     description: 'Bolo + 12 doces individuais a um preço especial.',
     price: 70.00,
-    image: combo,
+    image: chocolat,
     type: 'combo',
   },
   {
@@ -84,7 +89,7 @@ const products = [
     name: 'Doces Individuais',
     description: 'Uma seleção de doces variados para você saborear.',
     price: 90.00,
-    image: individuais,
+    image: individuai,
     type: 'doce',
   },
   {
@@ -92,25 +97,10 @@ const products = [
     name: 'Combo de Festas',
     description: 'Bolo + 12 doces individuais a um preço especial.',
     price: 70.00,
-    image: combo,
+    image: omb,
     type: 'combo',
   },
-  {
-    id: 4,
-    name: 'Combo de Festas',
-    description: 'Bolo + 12 doces individuais a um preço especial.',
-    price: 70.00,
-    image: combo,
-    type: 'combo',
-  },
-  {
-    id: 3,
-    name: 'Doces Individuais',
-    description: 'Uma seleção de doces variados para você saborear.',
-    price: 90.00,
-    image: individuais,
-    type: 'doce',
-  },
+
 
 ];
 

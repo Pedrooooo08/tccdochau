@@ -12,8 +12,7 @@ import i4 from '../image/espatula.jpeg';
 import i5 from '../image/fouet.png';
 import i6 from '../image/batadeira.jpeg';
 import ii from '../image/kitinho.jpeg';
-import ia from '../image/forninho.jpeg';
-import is from '../image/forma.jpeg';
+
 import ic from '../image/forma silico.jpeg';
 import ib from '../image/nova colher.jpeg';
 import im from '../image/bailarina inox.jpeg';
@@ -26,8 +25,8 @@ import im from '../image/bailarina inox.jpeg';
 
 
 const swiperSlides = [
-    { image: s1, text: "Utensílios & Bicos de Confeitar" },
-    { image: s2, text: "itens" },
+    { image: s1, text: "" },
+    { image: s2, text: "" },
 ];
 
 const produtos = [
@@ -72,13 +71,7 @@ const produtos = [
         image: i6,
         type: "colher",
     },
-    {
-        id: 1,
-        name: "Forno 220V/110V ",
-        price: 1.895,
-        image: ia,
-        type: "colher",
-    },
+
     {
         id: 1,
         name: "Kit de Silicone",
@@ -99,13 +92,7 @@ const produtos = [
         image: im,
         type: "colher",
     },
-    {
-        id: 1,
-        name: "Forma inox",
-        price: 65.0,
-        image: is,
-        type: "colher",
-    },
+
     {
         id: 1,
         name: "Enrolador de brigadeiro inox",
